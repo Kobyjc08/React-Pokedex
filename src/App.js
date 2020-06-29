@@ -1,16 +1,16 @@
 import React from 'react';
-import BestPokemonSelector from './components/BestPokemonFetcher';
+import BestPokemonSelector from './components/BestPokemon/BestPokemonSelector';
 import Logo from './components/Logo';
-import CaughtPokemon from './components/CaughtPokemon';
+import CaughtPokemon from './components/CaughtPokemon/CaughtPokemon';
 import './App.css';
 
 
 function App() {
-    const Abilities = ['Anticipation', 'Adaptability', 'Run-Away']
+    const today = new Date().toLocaleDateString()
     return <div>
-        <Logo appName='Pokedex'/>
-        <BestPokemonSelector Abilities={Abilities}/>
-        <CaughtPokemon date={new Date().toLocaleDateString()}/>
+        <Logo appName="Jorge's Pokedex"/>
+        <BestPokemonSelector/>
+        <CaughtPokemon date={today}/>
         </div>
 }
 
